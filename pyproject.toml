@@ -1,0 +1,69 @@
+[project]
+name = "sdss_xmatch"
+version = "0.1.0a1"
+description = "Metadata and schemas for AS5 catalogue cross-matching"
+authors = [
+    { name = "José Sánchez-Gallego", email = "gallegoj@uw.edu" },
+]
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
+readme = "README.md"
+requires-python = ">=3.13,<4"
+
+dependencies = [
+    "sdsstools>=1.9.2",
+]
+
+[dependency-groups]
+dev = [
+    "ipython>=8.0.0",
+    "ipdb>=0.12.3",
+    "ruff>=0.14.10",
+]
+
+[project.urls]
+Homepage = "https://github.com/albireox/sdss-xmatch"
+Repository = "https://github.com/albireox/sdss-xmatch"
+
+[tool.uv]
+package = true
+
+[tool.ruff]
+line-length = 88
+target-version = 'py313'
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+unfixable = ["F841"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F403", "E402", "F401"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["sdss_xmatch"]
+lines-after-imports = 2
+section-order = ["future", "standard-library", "typing", "third-party", "sdss", "first-party", "local-folder"]
+
+[tool.ruff.lint.isort.sections]
+typing = ["typing"]
+sdss = ["sdsstools", "sdssdb", "clu", "tree", "sdss_access", "datamodel", "coordio", "xmatch_rs"]
+
+[tool.pytest.ini_options]
+addopts = "--cov sdss_xmatch --cov-report xml --cov-report html --cov-report term -W ignore"
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.coverage.run]
+branch = true
+include = ["src/sdss_xmatch/*"]
+omit = []
+
+[tool.coverage.report]
+exclude_lines = [
+    "if TYPE_CHECKING:",
+    "# pragma: no cover"
+]
+
+[build-system]
+requires = ["uv_build>=0.9.20,<0.10.0"]
+build-backend = "uv_build"
