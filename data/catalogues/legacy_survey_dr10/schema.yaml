@@ -738,12 +738,13 @@ source_catalogue:
       unit: null
       rename_to: sersic_ivar
     SURVEY_PRIMARY:
-      dtype: Boolean
+      dtype: Int8
       description:
         True if object is in the primary survey footprint for unique-object
         selection
       unit: null
       rename_to: survey_primary
+      cast_to: Boolean
     LS_ID:
       dtype: UInt64
       description: SDSS-V Legacy Survey unique object identifier
