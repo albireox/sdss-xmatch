@@ -1,0 +1,773 @@
+catalogue_name: Legacy Survey DR10
+url: https://www.legacysurvey.org/dr10/files/#sweep-brickmin-brickmax-fits
+comments:
+  This catalogue includes the standard fields from the Legacy Survey DR10
+  sweep catalogue, plus computed columns ls_id, gaia_dr2_source_id, and gaia_dr3_source_id.
+ra_column: ra
+dec_column: dec
+pmra_column: pmra
+pmdec_column: pmdec
+pmra_is_cosdec: true
+source_catalogue:
+  data_url: https://www.legacysurvey.org/dr10/files/
+  format: csv
+  read_parameters:
+    csv_delimiter: ','
+    csv_has_header: true
+    csv_comment_prefix: '#'
+  columns:
+    RELEASE:
+      dtype: Int16
+      description: Integer denoting the camera and filter set used
+      unit: null
+      rename_to: release
+    BRICKID:
+      dtype: Int32
+      description: Brick ID
+      unit: null
+      rename_to: brickid
+    BRICKNAME:
+      dtype: String
+      description: Name of brick encoding the sky position
+      unit: null
+      rename_to: brickname
+    OBJID:
+      dtype: Int32
+      description: Catalog object number within this brick
+      unit: null
+      rename_to: objid
+    TYPE:
+      dtype: String
+      description: Morphological model (PSF, REX, DEV, EXP, SER, DUP)
+      unit: null
+      rename_to: type
+    RA:
+      dtype: Float64
+      description: Right ascension at equinox J2000
+      unit: deg
+      rename_to: ra
+    DEC:
+      dtype: Float64
+      description: Declination at equinox J2000
+      unit: deg
+      rename_to: dec
+    RA_IVAR:
+      dtype: Float32
+      description:
+        Inverse variance of RA (no cosine term), excluding astrometric calibration
+        errors
+      unit: 1/deg^2
+      rename_to: ra_ivar
+    DEC_IVAR:
+      dtype: Float32
+      description: Inverse variance of DEC, excluding astrometric calibration errors
+      unit: 1/deg^2
+      rename_to: dec_ivar
+    EBV:
+      dtype: Float32
+      description: Galactic extinction E(B-V) reddening from SFD98
+      unit: mag
+      rename_to: ebv
+    FLUX_G:
+      dtype: Float32
+      description: Model flux in g
+      unit: nanomaggy
+      rename_to: flux_g
+    FLUX_R:
+      dtype: Float32
+      description: Model flux in r
+      unit: nanomaggy
+      rename_to: flux_r
+    FLUX_I:
+      dtype: Float32
+      description: Model flux in i
+      unit: nanomaggy
+      rename_to: flux_i
+    FLUX_Z:
+      dtype: Float32
+      description: Model flux in z
+      unit: nanomaggy
+      rename_to: flux_z
+    FLUX_W1:
+      dtype: Float32
+      description: WISE model flux in W1 (AB system)
+      unit: nanomaggy
+      rename_to: flux_w1
+    FLUX_W2:
+      dtype: Float32
+      description: WISE model flux in W2 (AB system)
+      unit: nanomaggy
+      rename_to: flux_w2
+    FLUX_W3:
+      dtype: Float32
+      description: WISE model flux in W3 (AB system)
+      unit: nanomaggy
+      rename_to: flux_w3
+    FLUX_W4:
+      dtype: Float32
+      description: WISE model flux in W4 (AB system)
+      unit: nanomaggy
+      rename_to: flux_w4
+    FLUX_IVAR_G:
+      dtype: Float32
+      description: Inverse variance of flux_g
+      unit: 1/nanomaggy^2
+      rename_to: flux_ivar_g
+    FLUX_IVAR_R:
+      dtype: Float32
+      description: Inverse variance of flux_r
+      unit: 1/nanomaggy^2
+      rename_to: flux_ivar_r
+    FLUX_IVAR_I:
+      dtype: Float32
+      description: Inverse variance of flux_i
+      unit: 1/nanomaggy^2
+      rename_to: flux_ivar_i
+    FLUX_IVAR_Z:
+      dtype: Float32
+      description: Inverse variance of flux_z
+      unit: 1/nanomaggy^2
+      rename_to: flux_ivar_z
+    FLUX_IVAR_W1:
+      dtype: Float32
+      description: Inverse variance of flux_w1
+      unit: 1/nanomaggy^2
+      rename_to: flux_ivar_w1
+    FLUX_IVAR_W2:
+      dtype: Float32
+      description: Inverse variance of flux_w2
+      unit: 1/nanomaggy^2
+      rename_to: flux_ivar_w2
+    FLUX_IVAR_W3:
+      dtype: Float32
+      description: Inverse variance of flux_w3
+      unit: 1/nanomaggy^2
+      rename_to: flux_ivar_w3
+    FLUX_IVAR_W4:
+      dtype: Float32
+      description: Inverse variance of flux_w4
+      unit: 1/nanomaggy^2
+      rename_to: flux_ivar_w4
+    MW_TRANSMISSION_G:
+      dtype: Float32
+      description: Galactic transmission in g filter in linear units
+      unit: null
+      rename_to: mw_transmission_g
+    MW_TRANSMISSION_R:
+      dtype: Float32
+      description: Galactic transmission in r filter in linear units
+      unit: null
+      rename_to: mw_transmission_r
+    MW_TRANSMISSION_I:
+      dtype: Float32
+      description: Galactic transmission in i filter in linear units
+      unit: null
+      rename_to: mw_transmission_i
+    MW_TRANSMISSION_Z:
+      dtype: Float32
+      description: Galactic transmission in z filter in linear units
+      unit: null
+      rename_to: mw_transmission_z
+    MW_TRANSMISSION_W1:
+      dtype: Float32
+      description: Galactic transmission in W1 filter in linear units
+      unit: null
+      rename_to: mw_transmission_w1
+    MW_TRANSMISSION_W2:
+      dtype: Float32
+      description: Galactic transmission in W2 filter in linear units
+      unit: null
+      rename_to: mw_transmission_w2
+    MW_TRANSMISSION_W3:
+      dtype: Float32
+      description: Galactic transmission in W3 filter in linear units
+      unit: null
+      rename_to: mw_transmission_w3
+    MW_TRANSMISSION_W4:
+      dtype: Float32
+      description: Galactic transmission in W4 filter in linear units
+      unit: null
+      rename_to: mw_transmission_w4
+    NOBS_G:
+      dtype: Int16
+      description: Number of images contributing to the central pixel in g
+      unit: null
+      rename_to: nobs_g
+    NOBS_R:
+      dtype: Int16
+      description: Number of images contributing to the central pixel in r
+      unit: null
+      rename_to: nobs_r
+    NOBS_I:
+      dtype: Int16
+      description: Number of images contributing to the central pixel in i
+      unit: null
+      rename_to: nobs_i
+    NOBS_Z:
+      dtype: Int16
+      description: Number of images contributing to the central pixel in z
+      unit: null
+      rename_to: nobs_z
+    NOBS_W1:
+      dtype: Int16
+      description: Number of images contributing to the central pixel in W1
+      unit: null
+      rename_to: nobs_w1
+    NOBS_W2:
+      dtype: Int16
+      description: Number of images contributing to the central pixel in W2
+      unit: null
+      rename_to: nobs_w2
+    NOBS_W3:
+      dtype: Int16
+      description: Number of images contributing to the central pixel in W3
+      unit: null
+      rename_to: nobs_w3
+    NOBS_W4:
+      dtype: Int16
+      description: Number of images contributing to the central pixel in W4
+      unit: null
+      rename_to: nobs_w4
+    RCHISQ_G:
+      dtype: Float32
+      description:
+        Profile-weighted chi-square of model fit normalized by pixel count
+        in g
+      unit: null
+      rename_to: rchisq_g
+    RCHISQ_R:
+      dtype: Float32
+      description:
+        Profile-weighted chi-square of model fit normalized by pixel count
+        in r
+      unit: null
+      rename_to: rchisq_r
+    RCHISQ_I:
+      dtype: Float32
+      description:
+        Profile-weighted chi-square of model fit normalized by pixel count
+        in i
+      unit: null
+      rename_to: rchisq_i
+    RCHISQ_Z:
+      dtype: Float32
+      description:
+        Profile-weighted chi-square of model fit normalized by pixel count
+        in z
+      unit: null
+      rename_to: rchisq_z
+    RCHISQ_W1:
+      dtype: Float32
+      description:
+        Profile-weighted chi-square of model fit normalized by pixel count
+        in W1
+      unit: null
+      rename_to: rchisq_w1
+    RCHISQ_W2:
+      dtype: Float32
+      description:
+        Profile-weighted chi-square of model fit normalized by pixel count
+        in W2
+      unit: null
+      rename_to: rchisq_w2
+    RCHISQ_W3:
+      dtype: Float32
+      description:
+        Profile-weighted chi-square of model fit normalized by pixel count
+        in W3
+      unit: null
+      rename_to: rchisq_w3
+    RCHISQ_W4:
+      dtype: Float32
+      description:
+        Profile-weighted chi-square of model fit normalized by pixel count
+        in W4
+      unit: null
+      rename_to: rchisq_w4
+    FRACFLUX_G:
+      dtype: Float32
+      description:
+        Profile-weighted fraction of flux from other sources divided by total
+        flux in g
+      unit: null
+      rename_to: fracflux_g
+    FRACFLUX_R:
+      dtype: Float32
+      description:
+        Profile-weighted fraction of flux from other sources divided by total
+        flux in r
+      unit: null
+      rename_to: fracflux_r
+    FRACFLUX_I:
+      dtype: Float32
+      description:
+        Profile-weighted fraction of flux from other sources divided by total
+        flux in i
+      unit: null
+      rename_to: fracflux_i
+    FRACFLUX_Z:
+      dtype: Float32
+      description:
+        Profile-weighted fraction of flux from other sources divided by total
+        flux in z
+      unit: null
+      rename_to: fracflux_z
+    FRACFLUX_W1:
+      dtype: Float32
+      description:
+        Profile-weighted fraction of flux from other sources divided by total
+        flux in W1
+      unit: null
+      rename_to: fracflux_w1
+    FRACFLUX_W2:
+      dtype: Float32
+      description:
+        Profile-weighted fraction of flux from other sources divided by total
+        flux in W2
+      unit: null
+      rename_to: fracflux_w2
+    FRACFLUX_W3:
+      dtype: Float32
+      description:
+        Profile-weighted fraction of flux from other sources divided by total
+        flux in W3
+      unit: null
+      rename_to: fracflux_w3
+    FRACFLUX_W4:
+      dtype: Float32
+      description:
+        Profile-weighted fraction of flux from other sources divided by total
+        flux in W4
+      unit: null
+      rename_to: fracflux_w4
+    FRACMASKED_G:
+      dtype: Float32
+      description:
+        Profile-weighted fraction of pixels masked from all observations
+        in g
+      unit: null
+      rename_to: fracmasked_g
+    FRACMASKED_R:
+      dtype: Float32
+      description:
+        Profile-weighted fraction of pixels masked from all observations
+        in r
+      unit: null
+      rename_to: fracmasked_r
+    FRACMASKED_I:
+      dtype: Float32
+      description:
+        Profile-weighted fraction of pixels masked from all observations
+        in i
+      unit: null
+      rename_to: fracmasked_i
+    FRACMASKED_Z:
+      dtype: Float32
+      description:
+        Profile-weighted fraction of pixels masked from all observations
+        in z
+      unit: null
+      rename_to: fracmasked_z
+    FRACIN_G:
+      dtype: Float32
+      description: Fraction of source flux within the blob in g
+      unit: null
+      rename_to: fracin_g
+    FRACIN_R:
+      dtype: Float32
+      description: Fraction of source flux within the blob in r
+      unit: null
+      rename_to: fracin_r
+    FRACIN_I:
+      dtype: Float32
+      description: Fraction of source flux within the blob in i
+      unit: null
+      rename_to: fracin_i
+    FRACIN_Z:
+      dtype: Float32
+      description: Fraction of source flux within the blob in z
+      unit: null
+      rename_to: fracin_z
+    ANYMASK_G:
+      dtype: Int16
+      description:
+        Bitwise mask set if central pixel from any image satisfies each condition
+        in g
+      unit: null
+      rename_to: anymask_g
+    ANYMASK_R:
+      dtype: Int16
+      description:
+        Bitwise mask set if central pixel from any image satisfies each condition
+        in r
+      unit: null
+      rename_to: anymask_r
+    ANYMASK_I:
+      dtype: Int16
+      description:
+        Bitwise mask set if central pixel from any image satisfies each condition
+        in i
+      unit: null
+      rename_to: anymask_i
+    ANYMASK_Z:
+      dtype: Int16
+      description:
+        Bitwise mask set if central pixel from any image satisfies each condition
+        in z
+      unit: null
+      rename_to: anymask_z
+    ALLMASK_G:
+      dtype: Int16
+      description:
+        Bitwise mask set if central pixel from all images satisfies each
+        condition in g
+      unit: null
+      rename_to: allmask_g
+    ALLMASK_R:
+      dtype: Int16
+      description:
+        Bitwise mask set if central pixel from all images satisfies each
+        condition in r
+      unit: null
+      rename_to: allmask_r
+    ALLMASK_I:
+      dtype: Int16
+      description:
+        Bitwise mask set if central pixel from all images satisfies each
+        condition in i
+      unit: null
+      rename_to: allmask_i
+    ALLMASK_Z:
+      dtype: Int16
+      description:
+        Bitwise mask set if central pixel from all images satisfies each
+        condition in z
+      unit: null
+      rename_to: allmask_z
+    WISEMASK_W1:
+      dtype: UInt8
+      description: W1 bitmask
+      unit: null
+      rename_to: wisemask_w1
+    WISEMASK_W2:
+      dtype: UInt8
+      description: W2 bitmask
+      unit: null
+      rename_to: wisemask_w2
+    PSFSIZE_G:
+      dtype: Float32
+      description: Weighted average PSF FWHM in g
+      unit: arcsec
+      rename_to: psfsize_g
+    PSFSIZE_R:
+      dtype: Float32
+      description: Weighted average PSF FWHM in r
+      unit: arcsec
+      rename_to: psfsize_r
+    PSFSIZE_I:
+      dtype: Float32
+      description: Weighted average PSF FWHM in i
+      unit: arcsec
+      rename_to: psfsize_i
+    PSFSIZE_Z:
+      dtype: Float32
+      description: Weighted average PSF FWHM in z
+      unit: arcsec
+      rename_to: psfsize_z
+    PSFDEPTH_G:
+      dtype: Float32
+      description: Point-source detection depth in g
+      unit: 1/nanomaggy^2
+      rename_to: psfdepth_g
+    PSFDEPTH_R:
+      dtype: Float32
+      description: Point-source detection depth in r
+      unit: 1/nanomaggy^2
+      rename_to: psfdepth_r
+    PSFDEPTH_I:
+      dtype: Float32
+      description: Point-source detection depth in i
+      unit: 1/nanomaggy^2
+      rename_to: psfdepth_i
+    PSFDEPTH_Z:
+      dtype: Float32
+      description: Point-source detection depth in z
+      unit: 1/nanomaggy^2
+      rename_to: psfdepth_z
+    GALDEPTH_G:
+      dtype: Float32
+      description: Galaxy detection depth in g
+      unit: 1/nanomaggy^2
+      rename_to: galdepth_g
+    GALDEPTH_R:
+      dtype: Float32
+      description: Galaxy detection depth in r
+      unit: 1/nanomaggy^2
+      rename_to: galdepth_r
+    GALDEPTH_I:
+      dtype: Float32
+      description: Galaxy detection depth in i
+      unit: 1/nanomaggy^2
+      rename_to: galdepth_i
+    GALDEPTH_Z:
+      dtype: Float32
+      description: Galaxy detection depth in z
+      unit: 1/nanomaggy^2
+      rename_to: galdepth_z
+    PSFDEPTH_W1:
+      dtype: Float32
+      description: Point-source detection depth in W1 (AB system)
+      unit: 1/nanomaggy^2
+      rename_to: psfdepth_w1
+    PSFDEPTH_W2:
+      dtype: Float32
+      description: Point-source detection depth in W2 (AB system)
+      unit: 1/nanomaggy^2
+      rename_to: psfdepth_w2
+    WISE_COADD_ID:
+      dtype: String
+      description: unWISE coadd brick name for the object center
+      unit: null
+      rename_to: wise_coadd_id
+    SHAPE_R:
+      dtype: Float32
+      description: Half-light radius of galaxy model
+      unit: arcsec
+      rename_to: shape_r
+    SHAPE_R_IVAR:
+      dtype: Float32
+      description: Inverse variance of shape_r
+      unit: 1/arcsec^2
+      rename_to: shape_r_ivar
+    SHAPE_E1:
+      dtype: Float32
+      description: Ellipticity component 1 of galaxy model
+      unit: null
+      rename_to: shape_e1
+    SHAPE_E1_IVAR:
+      dtype: Float32
+      description: Inverse variance of shape_e1
+      unit: null
+      rename_to: shape_e1_ivar
+    SHAPE_E2:
+      dtype: Float32
+      description: Ellipticity component 2 of galaxy model
+      unit: null
+      rename_to: shape_e2
+    SHAPE_E2_IVAR:
+      dtype: Float32
+      description: Inverse variance of shape_e2
+      unit: null
+      rename_to: shape_e2_ivar
+    FIBERFLUX_G:
+      dtype: Float32
+      description:
+        Predicted g-band flux within a 1.5-arcsec diameter fiber in 1-arcsec
+        Gaussian seeing
+      unit: nanomaggy
+      rename_to: fiberflux_g
+    FIBERFLUX_R:
+      dtype: Float32
+      description:
+        Predicted r-band flux within a 1.5-arcsec diameter fiber in 1-arcsec
+        Gaussian seeing
+      unit: nanomaggy
+      rename_to: fiberflux_r
+    FIBERFLUX_I:
+      dtype: Float32
+      description:
+        Predicted i-band flux within a 1.5-arcsec diameter fiber in 1-arcsec
+        Gaussian seeing
+      unit: nanomaggy
+      rename_to: fiberflux_i
+    FIBERFLUX_Z:
+      dtype: Float32
+      description:
+        Predicted z-band flux within a 1.5-arcsec diameter fiber in 1-arcsec
+        Gaussian seeing
+      unit: nanomaggy
+      rename_to: fiberflux_z
+    FIBERTOTFLUX_G:
+      dtype: Float32
+      description:
+        Predicted g-band flux within a 1.5-arcsec diameter fiber from all
+        sources at this location
+      unit: nanomaggy
+      rename_to: fibertotflux_g
+    FIBERTOTFLUX_R:
+      dtype: Float32
+      description:
+        Predicted r-band flux within a 1.5-arcsec diameter fiber from all
+        sources at this location
+      unit: nanomaggy
+      rename_to: fibertotflux_r
+    FIBERTOTFLUX_I:
+      dtype: Float32
+      description:
+        Predicted i-band flux within a 1.5-arcsec diameter fiber from all
+        sources at this location
+      unit: nanomaggy
+      rename_to: fibertotflux_i
+    FIBERTOTFLUX_Z:
+      dtype: Float32
+      description:
+        Predicted z-band flux within a 1.5-arcsec diameter fiber from all
+        sources at this location
+      unit: nanomaggy
+      rename_to: fibertotflux_z
+    REF_CAT:
+      dtype: String
+      description: Reference catalog source for this object
+      unit: null
+      rename_to: ref_cat
+    REF_ID:
+      dtype: Int64
+      description: Reference catalog identifier
+      unit: null
+      rename_to: ref_id
+    REF_EPOCH:
+      dtype: Float32
+      description: Reference catalog epoch
+      unit: yr
+      rename_to: ref_epoch
+    GAIA_PHOT_G_MEAN_MAG:
+      dtype: Float32
+      description: Gaia EDR3 G-band magnitude
+      unit: mag
+      rename_to: gaia_phot_g_mean_mag
+    GAIA_PHOT_G_MEAN_FLUX_OVER_ERROR:
+      dtype: Float32
+      description: Gaia EDR3 G-band signal-to-noise
+      unit: null
+      rename_to: gaia_phot_g_mean_flux_over_error
+    GAIA_PHOT_BP_MEAN_MAG:
+      dtype: Float32
+      description: Gaia EDR3 BP magnitude
+      unit: mag
+      rename_to: gaia_phot_bp_mean_mag
+    GAIA_PHOT_BP_MEAN_FLUX_OVER_ERROR:
+      dtype: Float32
+      description: Gaia EDR3 BP signal-to-noise
+      unit: null
+      rename_to: gaia_phot_bp_mean_flux_over_error
+    GAIA_PHOT_RP_MEAN_MAG:
+      dtype: Float32
+      description: Gaia EDR3 RP magnitude
+      unit: mag
+      rename_to: gaia_phot_rp_mean_mag
+    GAIA_PHOT_RP_MEAN_FLUX_OVER_ERROR:
+      dtype: Float32
+      description: Gaia EDR3 RP signal-to-noise
+      unit: null
+      rename_to: gaia_phot_rp_mean_flux_over_error
+    GAIA_ASTROMETRIC_EXCESS_NOISE:
+      dtype: Float32
+      description: Gaia EDR3 astrometric excess noise
+      unit: null
+      rename_to: gaia_astrometric_excess_noise
+    GAIA_DUPLICATED_SOURCE:
+      dtype: Boolean
+      description: Gaia EDR3 duplicated source flag
+      unit: null
+      rename_to: gaia_duplicated_source
+    GAIA_PHOT_BP_RP_EXCESS_FACTOR:
+      dtype: Float32
+      description: Gaia EDR3 BP/RP excess factor
+      unit: null
+      rename_to: gaia_phot_bp_rp_excess_factor
+    GAIA_ASTROMETRIC_SIGMA5D_MAX:
+      dtype: Float32
+      description: Gaia EDR3 longest semi-major axis of the 5D error ellipsoid
+      unit: mas
+      rename_to: gaia_astrometric_sigma5d_max
+    GAIA_ASTROMETRIC_PARAMS_SOLVED:
+      dtype: UInt8
+      description: Gaia EDR3 astrometric-parameter solution flag
+      unit: null
+      rename_to: gaia_astrometric_params_solved
+    PARALLAX:
+      dtype: Float32
+      description: Reference catalog parallax
+      unit: mas
+      rename_to: parallax
+    PARALLAX_IVAR:
+      dtype: Float32
+      description: Inverse variance on parallax
+      unit: 1/mas^2
+      rename_to: parallax_ivar
+    PMRA:
+      dtype: Float32
+      description: Reference catalog proper motion in RA
+      unit: mas/yr
+      rename_to: pmra
+    PMRA_IVAR:
+      dtype: Float32
+      description: Inverse variance on pmra
+      unit: 1/(mas/yr)^2
+      rename_to: pmra_ivar
+    PMDEC:
+      dtype: Float32
+      description: Reference catalog proper motion in Dec
+      unit: mas/yr
+      rename_to: pmdec
+    PMDEC_IVAR:
+      dtype: Float32
+      description: Inverse variance on pmdec
+      unit: 1/(mas/yr)^2
+      rename_to: pmdec_ivar
+    MASKBITS:
+      dtype: Int32
+      description:
+        Bitwise mask indicating object touches masked pixels in coadd maskbits
+        maps
+      unit: null
+      rename_to: maskbits
+    FITBITS:
+      dtype: Int16
+      description: Bitwise mask describing peculiarities of model fitting
+      unit: null
+      rename_to: fitbits
+    SERSIC:
+      dtype: Float32
+      description: Sersic profile index for type SER
+      unit: null
+      rename_to: sersic
+    SERSIC_IVAR:
+      dtype: Float32
+      description: Inverse variance of sersic
+      unit: null
+      rename_to: sersic_ivar
+    SURVEY_PRIMARY:
+      dtype: Boolean
+      description:
+        True if object is in the primary survey footprint for unique-object
+        selection
+      unit: null
+      rename_to: survey_primary
+    LS_ID:
+      dtype: UInt64
+      description: SDSS-V Legacy Survey unique object identifier
+      unit: null
+      rename_to: ls_id
+      database_params:
+        unique: true
+        numerical_unique: true
+        primary_key: true
+    GAIA_DR2_SOURCE_ID:
+      dtype: UInt64
+      description: Gaia DR2 source identifier
+      unit: null
+      rename_to: gaia_dr2_source_id
+    GAIA_DR3_SOURCE_ID:
+      dtype: UInt64
+      description: Gaia DR3 source identifier
+      unit: null
+      rename_to: gaia_dr3_source_id
+extra_columns:
+  healpix_19:
+    dtype: UInt64
+    description: HEALPix index at depth 19 (NSIDE = 524288)
+database:
+  table_name: legacy_survey_dr10
+  schema: catalogdb
+  primary_key: ls_id
