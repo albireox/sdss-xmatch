@@ -540,9 +540,22 @@ source_catalogue:
       dtype: String
       description: Name of library that achieves the highest mean log-posterior in MCMC samples and was used to derive GSP-Phot parameters in this table
 extra_columns:
-  _healpix_19:
+  _healpix_29:
     dtype: UInt64
-    description: HEALPix index at depth 19 (NSIDE = 524288)
+    description: HEALPix index at depth 29
+    database_name: healpix_29
+  Norder:
+    dtype: Int8
+    description: HEALPix order of the target in the HATS partition.
+    database_name: hats_norder
+  Dir:
+    dtype: UInt32
+    description: HATS directory grouping.
+    database_name: hats_dir
+  Npix:
+    dtype: UInt32
+    description: HEALPix pixel of order "norder" in which this target is included in the HATS partition.
+    database_name: hats_npix
 database:
   table_name: gaia_dr3_source
   schema: catalogdb
