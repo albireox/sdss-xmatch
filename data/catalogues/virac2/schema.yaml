@@ -5,6 +5,7 @@ bib_reference_url: null
 comments:
   See https://www.eso.org/rm/api/v1/public/releaseDescriptions/227 for catalogue
   and data model details.
+primary_key: sourceid
 ra_column: ra
 dec_column: de
 pmra_column: pmra
@@ -757,7 +758,6 @@ extra_columns:
 database:
   table_name: virac2
   schema: catalogdb
-  primary_key: sourceid
   indices:
     - q3c_ang2ipix(ra, de)
     - phot_j_mean_mag

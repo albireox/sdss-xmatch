@@ -1,5 +1,6 @@
 catalogue_name: Gaia DR3 source
 url: https://www.cosmos.esa.int/web/gaia/dr3
+primary_key: source_id
 ra_column: ra
 dec_column: dec
 pmra_column: pmra
@@ -562,7 +563,6 @@ extra_columns:
 database:
   table_name: gaia_dr3_source
   schema: catalogdb
-  primary_key: source_id
   indices:
     - phot_g_mean_mag
     - phot_bp_mean_mag
