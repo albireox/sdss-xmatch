@@ -5,6 +5,9 @@ dec_column: dec
 pmra_column: pmra
 pmdec_column: pmdec
 pmra_is_cosdec: true
+epoch: 2016.0
+epoch_format: jyear
+epoch_column: null
 source_catalogue:
   data_url: https://cdn.gea.esac.esa.int/?prefix=Gaia/gdr3/gaia_source/
   format: csv

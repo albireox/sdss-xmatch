@@ -1,0 +1,766 @@
+catalogue_name: virac2
+url: https://www.eso.org/sci/publications/announcements/sciann17684.html
+bib_reference: null
+bib_reference_url: null
+comments:
+  See https://www.eso.org/rm/api/v1/public/releaseDescriptions/227 for catalogue
+  and data model details.
+ra_column: ra
+dec_column: de
+pmra_column: pmra
+pmra_is_cosdec: true
+pmdec_column: pmde
+epoch: null
+epoch_format: jyear
+epoch_column: ref_epoch
+source_catalogue:
+  data_url: https://www.eso.org/sci/publications/announcements/sciann17684.html
+  format: fits
+  read_params:
+    csv_has_header: null
+    csv_delimiter: null
+    csv_comment_prefix: null
+    csv_null_values: []
+    nan_to_null: true
+  columns:
+    sourceid:
+      dtype: Int64
+      unit: null
+      description: Unique source identifier
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    astfit_epochs:
+      dtype: Int16
+      unit: null
+      description: Number of epochs used for astrometric solution
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    astfit_params:
+      dtype: Int16
+      unit: null
+      description: Number of astrometric solution parameters
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    duplicate:
+      dtype: Int16
+      unit: null
+      description: Flag indicating a likely duplicate entry
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ref_epoch:
+      dtype: Float64
+      unit: yr
+      description: Astrometric reference epoch
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ra:
+      dtype: Float64
+      unit: deg
+      description: Right ascension
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ra_error:
+      dtype: Float64
+      unit: mas
+      description: Uncertainty on right ascension
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    de:
+      dtype: Float64
+      unit: deg
+      description: Declination
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    de_error:
+      dtype: Float64
+      unit: mas
+      description: Uncertainty on declination
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    parallax:
+      dtype: Float64
+      unit: mas
+      description: Trigonometric parallax
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    parallax_error:
+      dtype: Float64
+      unit: mas
+      description: Uncertainty on trigonometric parallax
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    pmra:
+      dtype: Float64
+      unit: mas/yr
+      description: Proper motion in right ascension times cos(dec)
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    pmra_error:
+      dtype: Float64
+      unit: mas/yr
+      description: Uncertainty on proper motion in right ascension times cos(dec)
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    pmde:
+      dtype: Float64
+      unit: mas/yr
+      description: Proper motion in declination
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    pmde_error:
+      dtype: Float64
+      unit: mas/yr
+      description: Uncertainty on proper motion in declination
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ra_de_corr:
+      dtype: Float32
+      unit: null
+      description: Correlation between ra and de
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ra_parallax_corr:
+      dtype: Float32
+      unit: null
+      description: Correlation between ra and parallax
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ra_pmra_corr:
+      dtype: Float32
+      unit: null
+      description: Correlation between ra and pmra
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ra_pmde_corr:
+      dtype: Float32
+      unit: null
+      description: Correlation between ra and pmde
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    de_parallax_corr:
+      dtype: Float32
+      unit: null
+      description: Correlation between de and parallax
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    de_pmra_corr:
+      dtype: Float32
+      unit: null
+      description: Correlation between de and pmra
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    de_pmde_corr:
+      dtype: Float32
+      unit: null
+      description: Correlation between de and pmde
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    parallax_pmra_corr:
+      dtype: Float32
+      unit: null
+      description: Correlation between parallax and pmra
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    parallax_pmde_corr:
+      dtype: Float32
+      unit: null
+      description: Correlation between parallax and pmde
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    pmra_pmde_corr:
+      dtype: Float32
+      unit: null
+      description: Correlation between pmra and pmde
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    chisq:
+      dtype: Float32
+      unit: null
+      description: Chi squared of astrometric fit
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    uwe:
+      dtype: Float32
+      unit: null
+      description: Unit weight error of astrometric fit
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    phot_z_mean_mag:
+      dtype: Float32
+      unit: mag
+      description: Mean Z band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    phot_z_std_mag:
+      dtype: Float32
+      unit: mag
+      description: Standard deviation of Z band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    phot_z_n_epochs:
+      dtype: Int16
+      unit: null
+      description: Number of Z band epochs contributing to statistics
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    z_n_obs:
+      dtype: Int16
+      unit: null
+      description: Approximate number of Z band observations
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    z_n_det:
+      dtype: Int16
+      unit: null
+      description: Number of Z band detections
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    z_n_amb:
+      dtype: Int16
+      unit: null
+      description: Number of Z band detections shared with another source
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    phot_y_mean_mag:
+      dtype: Float32
+      unit: mag
+      description: Mean Y band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    phot_y_std_mag:
+      dtype: Float32
+      unit: mag
+      description: Standard deviation of Y band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    phot_y_n_epochs:
+      dtype: Int16
+      unit: null
+      description: Number of Y band epochs contributing to statistics
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    y_n_obs:
+      dtype: Int16
+      unit: null
+      description: Approximate number of Y band observations
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    y_n_det:
+      dtype: Int16
+      unit: null
+      description: Number of Y band detections
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    y_n_amb:
+      dtype: Int16
+      unit: null
+      description: Number of Y band detections shared with another source
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    phot_j_mean_mag:
+      dtype: Float32
+      unit: mag
+      description: Mean J band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    phot_j_std_mag:
+      dtype: Float32
+      unit: mag
+      description: Standard deviation of J band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    phot_j_n_epochs:
+      dtype: Int16
+      unit: null
+      description: Number of J band epochs contributing to statistics
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    j_n_obs:
+      dtype: Int16
+      unit: null
+      description: Approximate number of J band observations
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    j_n_det:
+      dtype: Int16
+      unit: null
+      description: Number of J band detections
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    j_n_amb:
+      dtype: Int16
+      unit: null
+      description: Number of J band detections shared with another source
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    phot_h_mean_mag:
+      dtype: Float32
+      unit: mag
+      description: Mean H band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    phot_h_std_mag:
+      dtype: Float32
+      unit: mag
+      description: Standard deviation of H band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    phot_h_n_epochs:
+      dtype: Int16
+      unit: null
+      description: Number of H band epochs contributing to statistics
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    h_n_obs:
+      dtype: Int16
+      unit: null
+      description: Approximate number of H band observations
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    h_n_det:
+      dtype: Int16
+      unit: null
+      description: Number of H band detections
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    h_n_amb:
+      dtype: Int16
+      unit: null
+      description: Number of H band detections shared with another source
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    phot_ks_mean_mag:
+      dtype: Float32
+      unit: mag
+      description: Mean Ks band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    phot_ks_std_mag:
+      dtype: Float32
+      unit: mag
+      description: Standard deviation of Ks band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    phot_ks_n_epochs:
+      dtype: Int16
+      unit: null
+      description: Number of Ks band epochs contributing to statistics
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_n_obs:
+      dtype: Int16
+      unit: null
+      description: Approximate number of Ks band observations
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_n_det:
+      dtype: Int16
+      unit: null
+      description: Number of Ks band detections
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_n_amb:
+      dtype: Int16
+      unit: null
+      description: Number of Ks band detections shared with another source
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_first_epoch:
+      dtype: Float64
+      unit: d
+      description: Epoch of first Ks band detection
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_last_epoch:
+      dtype: Float64
+      unit: d
+      description: Epoch of last Ks band detection
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_skew:
+      dtype: Float32
+      unit: null
+      description: Skewness of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p0:
+      dtype: Float32
+      unit: mag
+      description: 0th percentile (i.e. min) of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p1:
+      dtype: Float32
+      unit: mag
+      description: 1st percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p2:
+      dtype: Float32
+      unit: mag
+      description: 2nd percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p4:
+      dtype: Float32
+      unit: mag
+      description: 4th percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p5:
+      dtype: Float32
+      unit: mag
+      description: 5th percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p8:
+      dtype: Float32
+      unit: mag
+      description: 8th percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p16:
+      dtype: Float32
+      unit: mag
+      description: 16th percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p25:
+      dtype: Float32
+      unit: mag
+      description: 25th percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p32:
+      dtype: Float32
+      unit: mag
+      description: 32nd percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p50:
+      dtype: Float32
+      unit: mag
+      description: 50th percentile (i.e. median) of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p68:
+      dtype: Float32
+      unit: mag
+      description: 68th percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p75:
+      dtype: Float32
+      unit: mag
+      description: 75th percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p84:
+      dtype: Float32
+      unit: mag
+      description: 84th percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p92:
+      dtype: Float32
+      unit: mag
+      description: 92nd percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p95:
+      dtype: Float32
+      unit: mag
+      description: 95th percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p96:
+      dtype: Float32
+      unit: mag
+      description: 96th percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p98:
+      dtype: Float32
+      unit: mag
+      description: 98th percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p99:
+      dtype: Float32
+      unit: mag
+      description: 99th percentile of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_p100:
+      dtype: Float32
+      unit: mag
+      description: 100th percentile (i.e. max) of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_mad:
+      dtype: Float32
+      unit: mag
+      description: Median absolute deviation from the median Ks band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_med_err:
+      dtype: Float32
+      unit: mag
+      description: Median uncertainty of Ks band magnitudes
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_Stetson_I:
+      dtype: Float64
+      unit: null
+      description: Stetson I index for Ks band magnitudes
+      cast_to: null
+      rename_to: ks_stetson_i
+      database_name: null
+      apply_functions: []
+    ks_Stetson_J:
+      dtype: Float64
+      unit: null
+      description: Stetson J index for Ks band magnitudes
+      cast_to: null
+      rename_to: ks_stetson_j
+      database_name: null
+      apply_functions: []
+    ks_Stetson_K:
+      dtype: Float64
+      unit: null
+      description: Stetson K index for Ks band magnitudes
+      cast_to: null
+      rename_to: ks_stetson_k
+      database_name: null
+      apply_functions: []
+    ks_Stetson_group_count:
+      dtype: Int32
+      unit: null
+      description: Number of observation groups used for Stetson indices
+      cast_to: null
+      rename_to: ks_stetson_group_count
+      database_name: null
+      apply_functions: []
+    ks_eta:
+      dtype: Float64
+      unit: null
+      description: Von Neumann eta index
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ks_eta_f:
+      dtype: Float64
+      unit: null
+      description: Modified von Neumann eta index
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+extra_columns:
+  _healpy_29:
+    dtype: UInt64
+    unit: null
+    description: HEALPix index at depth 29
+    cast_to: null
+    rename_to: null
+    database_name: healpix_29
+    apply_functions: []
+  Norder:
+    dtype: Int8
+    unit: null
+    description: HEALPix order of the target in the HATS partition
+    cast_to: null
+    rename_to: null
+    database_name: hats_norder
+    apply_functions: []
+  Dir:
+    dtype: UInt32
+    unit: null
+    description: HATS directory grouping
+    cast_to: null
+    rename_to: null
+    database_name: hats_dir
+    apply_functions: []
+  Npix:
+    dtype: UInt32
+    unit: null
+    description:
+      HEALPix pixel of order norder in which this target is included in
+      the HATS partition.
+    cast_to: null
+    rename_to: null
+    database_name: hats_npix
+    apply_functions: []
+database:
+  table_name: virac2
+  schema: catalogdb
+  primary_key: sourceid
+  indices:
+    - q3c_ang2ipix(ra, de)
+    - phot_j_mean_mag
+    - phot_h_mean_mag
+    - phot_ks_mean_mag
+  foreign_keys: []
