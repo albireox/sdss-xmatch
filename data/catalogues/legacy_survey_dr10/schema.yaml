@@ -1,4 +1,5 @@
 catalogue_name: Legacy Survey DR10
+short_name: legacy_survey_dr10
 url: https://www.legacysurvey.org/dr10/files/#sweep-brickmin-brickmax-fits
 comments:
   This catalogue includes the standard fields from the Legacy Survey DR10

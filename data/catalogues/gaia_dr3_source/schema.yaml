@@ -1,4 +1,5 @@
 catalogue_name: Gaia DR3 source
+short_name: gaia_dr3_source
 url: https://www.cosmos.esa.int/web/gaia/dr3
 primary_key: source_id
 ra_column: ra
