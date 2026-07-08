@@ -1,0 +1,695 @@
+catalogue_name: GLIMPSE Proper
+short_name: glimpse_proper
+description:
+  The GLIMPSE Proper project re-images about 43 square degrees of the Galactic center to
+  measure the proper motions of millions of sources within 5 degrees of the Galactic center over the last decade.
+url: https://irsa.ipac.caltech.edu/data/SPITZER/GLIMPSE/doc/glimpse_proper_v1.0.pdf
+bib_reference: Benjamin et al. (2015)
+bib_reference_url: https://irsa.ipac.caltech.edu/data/SPITZER/GLIMPSE/doc/glimpse_proper_v1.0.pdf
+comments: null
+primary_key: designation
+create_primary_key: false
+ra_column: ra
+ra_column_unit: degrees
+dec_column: dec
+dec_column_unit: degrees
+pmra_column: null
+pmra_is_cosdec: true
+pmdec_column: null
+epoch: null
+epoch_format: null
+epoch_column: null
+source_catalogue:
+  data_url: https://irsa.ipac.caltech.edu/data/SPITZER/GLIMPSE/
+  format: ipac
+  read_params:
+    csv_has_header: null
+    csv_delimiter: null
+    csv_comment_prefix: null
+    csv_null_values: []
+    nan_to_null: false
+  columns:
+    designation:
+      dtype: String
+      unit: null
+      description: APOGLIMPSE source designation following the IAU-style SSTAPOGLC naming convention
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    tmass_designation:
+      dtype: String
+      unit: null
+      description: Source designation from the 2MASS All-Sky Point Source Catalog
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    tmass_cntr:
+      dtype: Int64
+      unit: null
+      description: Unique 2MASS All-Sky Point Source Catalog source identifier
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    l:
+      dtype: Float64
+      unit: deg
+      description: Galactic longitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    b:
+      dtype: Float64
+      unit: deg
+      description: Galactic latitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    dl:
+      dtype: Float64
+      unit: arcsec
+      description: Uncertainty in Galactic longitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    db:
+      dtype: Float64
+      unit: arcsec
+      description: Uncertainty in Galactic latitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ra:
+      dtype: Float64
+      unit: deg
+      description: Right ascension (J2000)
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    dec:
+      dtype: Float64
+      unit: deg
+      description: Declination (J2000)
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    dra:
+      dtype: Float64
+      unit: arcsec
+      description: Uncertainty in right ascension
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    ddec:
+      dtype: Float64
+      unit: arcsec
+      description: Uncertainty in declination
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    csf:
+      dtype: Int64
+      unit: null
+      description: Close source flag encoding the distance to the nearest APOGLIMPSE Archive neighbor within 3 arcsec
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    mag_J:
+      dtype: Float64
+      unit: mag
+      description: 2MASS J-band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    dJ_m:
+      dtype: Float64
+      unit: mag
+      description: 1-sigma uncertainty in the 2MASS J-band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    mag_H:
+      dtype: Float64
+      unit: mag
+      description: 2MASS H-band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    dH_m:
+      dtype: Float64
+      unit: mag
+      description: 1-sigma uncertainty in the 2MASS H-band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    mag_Ks:
+      dtype: Float64
+      unit: mag
+      description: 2MASS Ks-band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    dKs_m:
+      dtype: Float64
+      unit: mag
+      description: 1-sigma uncertainty in the 2MASS Ks-band magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    mag3_6:
+      dtype: Float64
+      unit: mag
+      description: 3.6 um IRAC Band 1 magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    d3_6m:
+      dtype: Float64
+      unit: mag
+      description: 1-sigma uncertainty in the 3.6 um IRAC Band 1 magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    mag4_5:
+      dtype: Float64
+      unit: mag
+      description: 4.5 um IRAC Band 2 magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    d4_5m:
+      dtype: Float64
+      unit: mag
+      description: 1-sigma uncertainty in the 4.5 um IRAC Band 2 magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    mag5_8:
+      dtype: Float64
+      unit: mag
+      description: 5.8 um IRAC Band 3 magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    d5_8m:
+      dtype: Float64
+      unit: mag
+      description: 1-sigma uncertainty in the 5.8 um IRAC Band 3 magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    mag8_0:
+      dtype: Float64
+      unit: mag
+      description: 8.0 um IRAC Band 4 magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    d8_0m:
+      dtype: Float64
+      unit: mag
+      description: 1-sigma uncertainty in the 8.0 um IRAC Band 4 magnitude
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    f_J:
+      dtype: Float64
+      unit: mJy
+      description: 2MASS J-band flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    df_J:
+      dtype: Float64
+      unit: mJy
+      description: 1-sigma uncertainty in the 2MASS J-band flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    f_H:
+      dtype: Float64
+      unit: mJy
+      description: 2MASS H-band flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    df_H:
+      dtype: Float64
+      unit: mJy
+      description: 1-sigma uncertainty in the 2MASS H-band flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    f_Ks:
+      dtype: Float64
+      unit: mJy
+      description: 2MASS Ks-band flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    df_Ks:
+      dtype: Float64
+      unit: mJy
+      description: 1-sigma uncertainty in the 2MASS Ks-band flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    f3_6:
+      dtype: Float64
+      unit: mJy
+      description: 3.6 um IRAC Band 1 flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    df3_6:
+      dtype: Float64
+      unit: mJy
+      description: 1-sigma uncertainty in the 3.6 um IRAC Band 1 flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    f4_5:
+      dtype: Float64
+      unit: mJy
+      description: 4.5 um IRAC Band 2 flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    df4_5:
+      dtype: Float64
+      unit: mJy
+      description: 1-sigma uncertainty in the 4.5 um IRAC Band 2 flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    f5_8:
+      dtype: Float64
+      unit: mJy
+      description: 5.8 um IRAC Band 3 flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    df5_8:
+      dtype: Float64
+      unit: mJy
+      description: 1-sigma uncertainty in the 5.8 um IRAC Band 3 flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    f8_0:
+      dtype: Float64
+      unit: mJy
+      description: 8.0 um IRAC Band 4 flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    df8_0:
+      dtype: Float64
+      unit: mJy
+      description: 1-sigma uncertainty in the 8.0 um IRAC Band 4 flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    rms_f3_6:
+      dtype: Float64
+      unit: mJy
+      description: RMS deviation of individual detections from the final 3.6 um IRAC Band 1 flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    rms_f4_5:
+      dtype: Float64
+      unit: mJy
+      description: RMS deviation of individual detections from the final 4.5 um IRAC Band 2 flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    rms_f5_8:
+      dtype: Float64
+      unit: mJy
+      description: RMS deviation of individual detections from the final 5.8 um IRAC Band 3 flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    rms_f8_0:
+      dtype: Float64
+      unit: mJy
+      description: RMS deviation of individual detections from the final 8.0 um IRAC Band 4 flux
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sky_3_6:
+      dtype: Float64
+      unit: MJy sr-1
+      description: Local sky background at 3.6 um IRAC Band 1
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sky_4_5:
+      dtype: Float64
+      unit: MJy sr-1
+      description: Local sky background at 4.5 um IRAC Band 2
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sky_5_8:
+      dtype: Float64
+      unit: MJy sr-1
+      description: Local sky background at 5.8 um IRAC Band 3
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sky_8_0:
+      dtype: Float64
+      unit: MJy sr-1
+      description: Local sky background at 8.0 um IRAC Band 4
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sn_J:
+      dtype: Float64
+      unit: null
+      description: 2MASS J-band signal-to-noise ratio
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sn_H:
+      dtype: Float64
+      unit: null
+      description: 2MASS H-band signal-to-noise ratio
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sn_Ks:
+      dtype: Float64
+      unit: null
+      description: 2MASS Ks-band signal-to-noise ratio
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sn_3_6:
+      dtype: Float64
+      unit: null
+      description: 3.6 um IRAC Band 1 signal-to-noise ratio
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sn_4_5:
+      dtype: Float64
+      unit: null
+      description: 4.5 um IRAC Band 2 signal-to-noise ratio
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sn_5_8:
+      dtype: Float64
+      unit: null
+      description: 5.8 um IRAC Band 3 signal-to-noise ratio
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sn_8_0:
+      dtype: Float64
+      unit: null
+      description: 8.0 um IRAC Band 4 signal-to-noise ratio
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    dens_3_6:
+      dtype: Float64
+      unit: '#/sqamin'
+      description: Local source density at 3.6 um IRAC Band 1
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    dens_4_5:
+      dtype: Float64
+      unit: '#/sqamin'
+      description: Local source density at 4.5 um IRAC Band 2
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    dens_5_8:
+      dtype: Float64
+      unit: '#/sqamin'
+      description: Local source density at 5.8 um IRAC Band 3
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    dens_8_0:
+      dtype: Float64
+      unit: '#/sqamin'
+      description: Local source density at 8.0 um IRAC Band 4
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    m3_6:
+      dtype: Int64
+      unit: null
+      description: Number of detections at 3.6 um IRAC Band 1
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    m4_5:
+      dtype: Int64
+      unit: null
+      description: Number of detections at 4.5 um IRAC Band 2
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    m5_8:
+      dtype: Int64
+      unit: null
+      description: Number of detections at 5.8 um IRAC Band 3
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    m8_0:
+      dtype: Int64
+      unit: null
+      description: Number of detections at 8.0 um IRAC Band 4
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    n3_6:
+      dtype: Int64
+      unit: null
+      description: Number of possible detections at 3.6 um IRAC Band 1
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    n4_5:
+      dtype: Int64
+      unit: null
+      description: Number of possible detections at 4.5 um IRAC Band 2
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    n5_8:
+      dtype: Int64
+      unit: null
+      description: Number of possible detections at 5.8 um IRAC Band 3
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    n8_0:
+      dtype: Int64
+      unit: null
+      description: Number of possible detections at 8.0 um IRAC Band 4
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sqf_J:
+      dtype: Int64
+      unit: null
+      description: 2MASS J-band source quality flag encoded with the GLIMPSE SQF bitmask
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sqf_H:
+      dtype: Int64
+      unit: null
+      description: 2MASS H-band source quality flag encoded with the GLIMPSE SQF bitmask
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sqf_Ks:
+      dtype: Int64
+      unit: null
+      description: 2MASS Ks-band source quality flag encoded with the GLIMPSE SQF bitmask
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sqf_3_6:
+      dtype: Int64
+      unit: null
+      description: 3.6 um IRAC Band 1 source quality flag encoded as a GLIMPSE SQF bitmask
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sqf_4_5:
+      dtype: Int64
+      unit: null
+      description: 4.5 um IRAC Band 2 source quality flag encoded as a GLIMPSE SQF bitmask
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sqf_5_8:
+      dtype: Int64
+      unit: null
+      description: 5.8 um IRAC Band 3 source quality flag encoded as a GLIMPSE SQF bitmask
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    sqf_8_0:
+      dtype: Int64
+      unit: null
+      description: 8.0 um IRAC Band 4 source quality flag encoded as a GLIMPSE SQF bitmask
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    mf3_6:
+      dtype: Int64
+      unit: null
+      description: 3.6 um IRAC Band 1 flux calculation method flag indicating which frametimes were present and used
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    mf4_5:
+      dtype: Int64
+      unit: null
+      description: 4.5 um IRAC Band 2 flux calculation method flag indicating which frametimes were present and used
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    mf5_8:
+      dtype: Int64
+      unit: null
+      description: 5.8 um IRAC Band 3 flux calculation method flag indicating which frametimes were present and used
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+    mf8_0:
+      dtype: Int64
+      unit: null
+      description: 8.0 um IRAC Band 4 flux calculation method flag indicating which frametimes were present and used
+      cast_to: null
+      rename_to: null
+      database_name: null
+      apply_functions: []
+extra_columns:
+  _healpy_29:
+    dtype: UInt64
+    unit: null
+    description: HEALPix index at depth 29
+    cast_to: null
+    rename_to: null
+    database_name: healpix_29
+    apply_functions: []
+  Norder:
+    dtype: Int8
+    unit: null
+    description: HEALPix order of the target in the HATS partition
+    cast_to: null
+    rename_to: null
+    database_name: hats_norder
+    apply_functions: []
+  Dir:
+    dtype: UInt32
+    unit: null
+    description: HATS directory grouping
+    cast_to: null
+    rename_to: null
+    database_name: hats_dir
+    apply_functions: []
+  Npix:
+    dtype: UInt32
+    unit: null
+    description:
+      HEALPix pixel of order norder in which this target is included in
+      the HATS partition.
+    cast_to: null
+    rename_to: null
+    database_name: hats_npix
+    apply_functions: []
+database:
+  table_name: glimpse_proper
+  schema: catalogdb
+  indices: []
+  foreign_keys: []
